@@ -1,6 +1,8 @@
 # Dockerizing Odoo
 
-This project was created to be used in development if you need a phoenix environment, not for production
+This project was created to be used for development, it's not for production
+
+Commands needed: `make`, `docker-compose`.
 
 ## Docker Version
 
@@ -26,7 +28,7 @@ make init up
 
 `make show` shows the current containers (needs `up`)
 
-`make init` starts configuration (needs `up-database`)
+`make init` starts the configuration
 
 
 ## Default Accounts
