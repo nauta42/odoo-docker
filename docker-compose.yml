@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  postgres:
+    image: postgres:9-alpine
+    restart: always
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo
+    ports:
+      - 5432:5432
+
+  odoo:
+    build:
+      context: odoo
+    restart: always
+    depends_on:
+      - postgres
+    ports:
+      - 8069:8069
+
+volumes:
+  postgres:
+    name: odoo_postgres
