@@ -9,7 +9,7 @@ show:
 	@echo '\nVolumes: ' && docker volume inspect odoo_postgres || true
 
 down:
-	@docker-compose down
+	@docker-compose stop
 
 delete:
 	@docker-compose rm -fsv
