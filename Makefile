@@ -6,7 +6,7 @@ up:
 
 show:
 	@docker-compose ps
-	@echo '\nVolumes: ' && docker volume inspect odoo_postgres
+	@echo '\nVolumes: ' && docker volume inspect odoo_postgres || true
 
 down:
 	@docker-compose down
