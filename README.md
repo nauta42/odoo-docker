@@ -1,14 +1,15 @@
 # Dockerizing Odoo
 
-This project was created to be used for development, it's not for production
+Docker swarm odoo deploy .
 
-Commands needed: `make`, `docker-compose`.
+## Links
+
+- https://hub.docker.com/_/odoo
 
 ## Docker Version
 
-- `docker-compose`: 1.17.1
-- `docker-compose.yml`: 3.4
-- `docker`: 18.06.0-ce
+- `docker-compose.yml`: 3.7
+- `docker`: 18.+
 
 ## Getting Started
 
@@ -18,20 +19,16 @@ make init up
 
 ## Commands
 
-`make build` creates containers
+`make run` runs the application
 
-`make up` runs the application (needs `init`)
+`make stop` stops the application
 
-`make down` stops the application
+`make show` shows the current services
 
-`make delete` deletes containers and volumes
-
-`make show` shows the current containers (needs `up`)
-
-`make init` starts the configuration
-
+`make logs` shows logs
 
 ## Default Accounts
+
 The following users and passwords are part of the initial seed database:
 
 |User|Password|

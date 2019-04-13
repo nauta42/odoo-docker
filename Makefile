@@ -1,18 +1,11 @@
-build:
-	@docker-compose build
-
-up:
-	@docker-compose up -d && sleep 5
+run:
+	@ docker stack deploy -c docker-compose.yml odoo
 
 show:
-	@docker-compose ps
-	@echo '\nVolumes: ' && docker volume inspect odoo_postgres || true
+	@ docker stack services odoo
 
-down:
-	@docker-compose stop
+stop:
+	@ docker stack rm odoo
 
-delete:
-	@docker-compose rm -fsv
-	@docker volume rm odoo_postgres || true
-
-init: delete build
+logs:
+	@ docker service logs -f odoo_odoo
